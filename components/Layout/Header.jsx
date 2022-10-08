@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import DropdownIcon from '../icons/DropdownIcon';
+import NotificationIcon from '../icons/NotificationIcon';
 
 
 const Header = () => {
@@ -50,8 +51,9 @@ const Header = () => {
                         <div className='lg:flex lg:items-center lg:w-auto'>
                             <div class="flex items-center justify-center relative gap-4 px-4 border-r border-r-border-border_cl">
 
-                                <span class=" px-3 py-3 text-[#DF9E05] bg-[#FEF9ED] transition duration-150 ease-in-out flex items-center justify-center h-10 w-10 font-medium rounded-full focus:outline-none focus:ring-0 ">
+                                <span class=" px-3 py-3 text-[#DF9E05] bg-[#FEF9ED] transition duration-150 ease-in-out flex items-center justify-center h-10 w-10 font-medium rounded-full focus:outline-none focus:ring-0 relative ">
                                 RW 
+                                <span className='absolute h-2 w-2 bg-[#45CD85] right-0 bottom-0 rounded-full'></span>
                                 </span>
                                 <button className='flex items-center '>
                                     <div class="flex items-start justify-start flex-col">
@@ -63,7 +65,7 @@ const Header = () => {
                                 
 
                             </div>
-                            <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+                            <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"><NotificationIcon/></a>
                         </div>
                     </div>
                 </nav>

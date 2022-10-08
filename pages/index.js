@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import UploadIcon from '../components/icons/UploadIcon'
 import Layout from '../components/Layout/Layout'
 import styles from '../styles/Home.module.css'
 
@@ -23,7 +24,7 @@ export default function Home() {
                           </h2>
                       </div>
 
-                      <button className=" items-center mt-4 lg:mt-0 px-12 py-2 rounded h-12  bg-[#45CD85]  hover:bg-[#45CD85]/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md justify-center  " id="addliquiditybtn">
+                      <button className=" items-center mt-4 lg:mt-0 px-14 py-2 rounded h-12  bg-[#45CD85]  hover:bg-[#45CD85]/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md justify-center  " id="addliquiditybtn">
               
                           Deposit
                           
@@ -35,12 +36,15 @@ export default function Home() {
                         <div className="w-full md:w-7/12 flex-col flex-1 md:space-y-4 h-full">
                             <div className="shadow w-full bg-white relative px-6 py-6 rounded">
                               <div className='flex items-end justify-between  py-4'>
-                                <div className="flex items-start justify-between flex-col gap-3 w-full">
+                                <div className="flex items-center lg:items-start justify-center lg:justify-between flex-col gap-3 w-full">
                                     <h5>Total Balance </h5>
                                     <h3 className="text-neutral800 text-4xl	">$40,000.64</h3>
                                 </div>
-                                <div>
-                                  <button className='text-sm text-[#45CD85]'>
+                                <div className='hidden lg:block'>
+                                  <button className='text-sm text-[#45CD85] flex items-center gap-2'>
+                                    <span>
+                                      <UploadIcon />
+                                    </span>
                                     withdraw
                                   </button>
                                   
@@ -186,14 +190,14 @@ export default function Home() {
                             <div className="  relative">
                                 <div className="w-full  flex items-center justify-between pb-2">
                                     <h4 className="text-md  text-[#5B5B5B]   font-normal	 ">
-                                    Recent Transactions
+                                      Recent Transactions
                                     </h4>
 
                                 </div>
                                 <div className='h-full flex-1 grow'>
                                   <div className='flex items-center justify-center h-full flex-col gap-9 py-14'>
                                     <div>
-                                      <img src='/images/pic.png'/>
+                                      <img src='/images/pic.svg'/>
                                     </div>
                                     <div>No recent transactions</div>
                                     

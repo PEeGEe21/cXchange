@@ -67,6 +67,9 @@ header{
   transition: all .3s ease-in-out;
   
 }
+.sidebarmenu .mobile_menu a.active {
+  background-color: #45cd8536;
+}
 .sidebarmenu .mobile_menu a:hover {
   background-color: #45cd8536;
   transition: all .3s ease-in-out;

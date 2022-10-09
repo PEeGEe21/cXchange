@@ -311,9 +311,9 @@ export default function Home() {
                             <div className='fade-in'>
                                     <h4 className='mb-3 font-semibold'>Add your Card</h4>
 
-                                    <div className="mb-6 flex items-center gap-4 flex-wrap">
-                                        <label className="text-gray-700 font-medium md:w-1/5 " htmlFor="cello_address">Card number</label>
-                                        <div className='h-12  relative flex-1'>
+                                    <div className="mb-6 flex md:flex-row flex-col items-start md:items-center gap-4 flex-wrap">
+                                        <label className="text-gray-700 font-medium w-full md:w-1/5 " htmlFor="cello_address">Card number</label>
+                                        <div className='h-12 w-full relative flex-1'>
                                             <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
                                         </div>
                                     </div>

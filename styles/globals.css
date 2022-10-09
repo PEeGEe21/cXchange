@@ -59,3 +59,46 @@ header{
   width: 80%;
   transition: .5s ease-in-out;
 }
+
+
+
+.sidebarmenu .mobile_menu a {
+  position: relative;
+  transition: all .3s ease-in-out;
+  
+}
+.sidebarmenu .mobile_menu a:hover {
+  background-color: #45cd8536;
+  transition: all .3s ease-in-out;
+
+}
+.sidebarmenu .mobile_menu a:after {
+  transition: all .3s ease-in-out;
+}
+
+
+.sidebarmenu .mobile_menu a.active:after {
+  border: 2px solid #45CD85;
+  /* border-right-color: #45CD85; */
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  transition: all .3s ease-in-out;
+}
+
+.active .nav-pointer{
+  border: 5px solid transparent;
+  border-left-color: #45CD85;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* transform: rotate(180deg); */
+  width: 0;
+}

@@ -21,9 +21,11 @@ const Header = () => {
             <div className='container mx-auto'>
                 <nav className="flex items-center justify-between flex-wrap  px-6 py-4 ">
                     <div className="flex items-center flex-shrink-0 text-white mr-6">
-                        <a className="text-xl text-gray-800 font-semibold font-heading" href="#">
-                            <img src='/images/logo.svg'/>
-                        </a>
+                        <Link href="/">
+                            <a className="text-xl text-gray-800 font-semibold font-heading" >
+                                <img src='/images/logo.svg'/>
+                            </a>
+                        </Link>
                     </div>
                     <div className="block lg:hidden">
                         <div className='flex gap-5'>

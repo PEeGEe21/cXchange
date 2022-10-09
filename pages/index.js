@@ -19,17 +19,13 @@ export default function Home() {
             </button>
             <main className="h-full pb-24 px-4 md:px-12 py-12">
                       <div className="w-full flex items-center justify-between pb-4 mb-3 flex-wrap relative">
-                        <div className='grow'> 
+                        <div className='grow py-4'> 
                           <h1 className="text-3xl font-bold text-gray-800 mb-3 ">
                             Welcome back, Anna
                             </h1>
                             <h2 className="text-md text-gray-400">
                               Swap, stake and transfer your crptocurrencies.
                             </h2>
-
-                            
-
-
                         </div>
 
                         <button className=" items-center mt-4 lg:mt-0 px-14 py-2 rounded h-12  bg-[#45CD85]  hover:bg-[#45CD85]/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md justify-center  " id="addliquiditybtn">
@@ -37,8 +33,6 @@ export default function Home() {
                             Deposit
                             
                         </button>
-
-                        
 
                       </div>
                     
@@ -63,11 +57,11 @@ export default function Home() {
                                   
                               </div>
                               <div className="shadow w-full bg-white mt-3 md:mt-0  relative overflow-hidden rounded">
-                                <div className="px-6 py-6 w-full    relative">
+                                <div className="px-6 py-6 w-full relative">
                                     
                                   <div className="flex items-center justify-between flex-row w-full">
                                       <h5 className="text-gray-400 mb-3">Available Balances</h5>
-                                      <button className="text-gray-400 text-xs	">Hide</button>
+                                      <button className="text-gray-400 text-xs">Hide</button>
                                   </div>
 
 

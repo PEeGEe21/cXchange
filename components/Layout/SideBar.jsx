@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const SideBar = ({showMobile}) => {
+    const router = useRouter()
   return (
     <>
         <div className={`sidebarmenu ${showMobile ? 'show' : ''} py-5 overflow-y-auto`}>
@@ -15,22 +17,36 @@ const SideBar = ({showMobile}) => {
                     
                 </div>
                 <div className='mt-6'>
-                    <div className='flex flex-col items-start space-y-4'>
+                    <div className='flex flex-col items-start mobile_menu'>
                         <Link href='/' >
-                            <a  className='px-6 py-4 w-full hover:bg-gray-200 transition duration-300 ease-in-out text-lg text-[#5B5B5B]'>Dashboard</a>
+                            <a  className={` ${router.asPath === "/" ? 'active' : ''}  px-8 py-3 w-full ease-in-out text-base text-[#5B5B5B]`}>Dashboard
+                                <span className='nav-pointer'></span>
+                            </a>
                         </Link>
 
                         <Link href='/transfer' >
-                            <a className='px-6 py-4 w-full hover:bg-gray-200 transition duration-300 ease-in-out text-lg text-[#5B5B5B]'>Transfer</a>
+                            <a className={` ${router.asPath === "/transfer" ? 'active' : ''}  px-8 py-3 w-full ease-in-out text-base text-[#5B5B5B]`}>Transfer
+                                <span className='nav-pointer'></span>
+
+                            </a>
                         </Link>
                         <Link href='/transfer' >
-                            <a className='px-6 py-4 w-full hover:bg-gray-200 transition duration-300 ease-in-out text-lg text-[#5B5B5B]'>Stake</a>
+                            <a className='px-8 py-3 w-full text-base text-[#5B5B5B]'>Stake
+                            <span className='nav-pointer'></span>
+                            
+                            </a>
                         </Link>
                         <Link href='/transfer' >
-                            <a className='px-6 py-4 w-full hover:bg-gray-200 transition duration-300 ease-in-out text-lg text-[#5B5B5B]'>Swap</a>
+                            <a className='px-8 py-3 w-full text-base text-[#5B5B5B]'>Swap
+                            <span className='nav-pointer'></span>
+                            
+                            </a>
                         </Link>
                         <Link href='/transfer' >
-                            <a className='px-6 py-4 w-full hover:bg-gray-200 transition duration-300 ease-in-out text-lg text-[#5B5B5B]'>NFTs</a>
+                            <a className='px-8 py-3 w-full text-base text-[#5B5B5B]'>NFTs
+                            <span className='nav-pointer'></span>
+                            
+                            </a>
                         </Link>
                     </div>
                 </div>

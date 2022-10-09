@@ -49,16 +49,16 @@ const Header = () => {
                             </a>
                         </div>
                         <div className='lg:flex lg:items-center lg:w-auto'>
-                            <div class="flex items-center justify-center relative gap-4 px-4 border-r border-r-border-border_cl">
+                            <div className="flex items-center justify-center relative gap-4 px-4 border-r border-r-border-border_cl">
 
-                                <span class=" px-3 py-3 text-[#DF9E05] bg-[#FEF9ED] transition duration-150 ease-in-out flex items-center justify-center h-10 w-10 font-medium rounded-full focus:outline-none focus:ring-0 relative ">
+                                <span className=" px-3 py-3 text-[#DF9E05] bg-[#FEF9ED] transition duration-150 ease-in-out flex items-center justify-center h-10 w-10 font-medium rounded-full focus:outline-none focus:ring-0 relative ">
                                 RW 
                                 <span className='absolute h-2 w-2 bg-[#45CD85] right-0 bottom-0 rounded-full'></span>
                                 </span>
                                 <button className='flex items-center '>
-                                    <div class="flex items-start justify-start flex-col">
-                                        <span class="h4 text-sm font-semibold">Anna Will</span>
-                                        <span class="text-sm">0x34mkko....45526</span>
+                                    <div className="flex items-start justify-start flex-col">
+                                        <span className="h4 text-sm font-semibold">Anna Will</span>
+                                        <span className="text-sm">0x34mkko....45526</span>
                                     </div>
                                     <DropdownIcon/>
                                 </button>

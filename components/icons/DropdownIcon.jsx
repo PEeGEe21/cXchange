@@ -3,12 +3,12 @@ import React from 'react'
 const DropdownIcon = () => {
   return (
     <>
-        <span class="pointer-events-none">
+        <span className="pointer-events-none">
             <svg
-                ariaHidden="true"
+                aria-hidden="true"
                 focusable="false"
-                dataPrefix="fas"
-                dataIcon="caret-down"
+                data-prefix="fas"
+                data-icon="caret-down"
                 className="w-3 ml-3"
                 role="img"
                 viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"

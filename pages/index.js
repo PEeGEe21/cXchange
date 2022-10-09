@@ -57,7 +57,7 @@ export default function Home() {
                                   
                               </div>
                               <div className="shadow w-full bg-white mt-3 md:mt-0  relative overflow-hidden rounded">
-                                <div className="px-2 lg:px-6 py-6 w-full relative">
+                                <div className="px-3 md:px-6 py-6 w-full relative">
                                     
                                   <div className="flex items-center justify-between flex-row w-full">
                                       <h5 className="text-gray-400 mb-3">Available Balances</h5>

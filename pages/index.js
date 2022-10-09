@@ -294,7 +294,7 @@ export default function Home() {
                             </TabPanel>
                             <TabPanel>
                                 <div  className='fade-in'>
-                                    <div className="flex items-center gap-4 flex-wrap">
+                                    <div className="flex md:flex-row flex-col items-center gap-4 flex-wrap">
                                             <label className="text-gray-700 font-medium  " htmlFor="cello_address">Celo Address</label>
                                             <div className='h-12  relative flex-1'>
                                                 <span className='absolute inset-y-0 right-0 px-3 flex items-center cursor-pointer h-full text-[#45CD85]  '>

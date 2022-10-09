@@ -19,16 +19,13 @@ const Transfer = () => {
                     <div className="flex items-stretch w-full space-y-4 md:space-x-4 md:space-y-0 flex-col md:flex-row">
                         <div className="w-full md:w-4/12 flex-col flex-1 md:space-y-4 h-full ">
                             <aside>
-                                <div className=" w-full relative px-6 py-6 h-full">
-                                    <div className='grow'> 
-                                        <h1 className="text-3xl font-bold text-gray-800 mb-3 ">
+                                <div className=" w-full relative px-2 md:px-6 py-6 h-full grow">
+                                    <h1 className="text-3xl font-bold text-gray-800 mb-3 ">
                                             Transfer
-                                        </h1>
-                                        <h2 className="text-md text-gray-400">
-                                            Transfer to other wallets
-                                        </h2>
-                                    </div>
-                                    
+                                    </h1>
+                                    <h2 className="text-md text-gray-400">
+                                        Transfer to other wallets
+                                    </h2>
                                 </div>
                             </aside>
                             
@@ -40,7 +37,7 @@ const Transfer = () => {
                                         
                                     <div className="mb-6">
                                         <label className="text-gray-700 font-medium mb-3" htmlFor="wallet_address">Wallet Address</label>
-                                        <input id="wallet_address" type="text" placeholder="Paste wallet address here" className="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="wallet_address" autocomplete="off"/>
+                                        <input id="wallet_address" type="text" placeholder="Paste wallet address here" className="block w-full h-12 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="wallet_address" autocomplete="off"/>
                                     </div>
 
                                     <div className="mb-6">
@@ -49,7 +46,16 @@ const Transfer = () => {
                                         </div>
                                         <div className="dropdown relative grow large-dropdown mb-4" data-large-dropdown="">
                                             <button className="w-full bg-white h-12 focus:outline-none active:outline-none  flex items-center justify-between border border-neutral100 focus:border-gray_cl active:border-gray_cl px-4 py-3 mt-2 rounded-lg" id="token" data-large-dropdown-btn="" type="button">
-                                                <span className="pointer-events-none text-gray-400">Select currency to withdraw</span>
+                                                <span className="pointer-events-none flex items-center gap-2 text-gray-400">
+                                                    <svg className='h-8 w-8' viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="24" cy="24.5" r="24" fill="#E7EFF3"/>
+                                                            <path fillRule="evenodd" clipRule="evenodd" d="M10 27.4474C10 33.5514 14.9486 38.5 21.0526 38.5C27.1566 38.5 32.1053 33.5514 32.1053 27.4474C32.1053 21.3434 27.1566 16.3948 21.0526 16.3948C14.9486 16.3948 10 21.3434 10 27.4474ZM29.1579 27.4474C29.1579 31.9245 25.5297 35.5527 21.0526 35.5527C16.5756 35.5527 12.9474 31.9245 12.9474 27.4474C12.9474 22.9704 16.5756 19.3421 21.0526 19.3421C25.5297 19.3421 29.1579 22.9704 29.1579 27.4474Z" fill="#FBCC5C"/>
+                                                            <path fillRule="evenodd" clipRule="evenodd" d="M15.8945 21.5526C15.8945 27.6566 20.8432 32.6053 26.9472 32.6053C33.0512 32.6053 37.9998 27.6566 37.9998 21.5526C37.9998 15.4486 33.0512 10.5 26.9472 10.5C20.8432 10.5 15.8945 15.4486 15.8945 21.5526ZM35.0524 21.5526C35.0524 26.0297 31.4242 29.6579 26.9472 29.6579C22.4701 29.6579 18.8419 26.0297 18.8419 21.5526C18.8419 17.0756 22.4701 13.4474 26.9472 13.4474C31.4242 13.4474 35.0524 17.0756 35.0524 21.5526Z" fill="#35D07F"/>
+                                                            <path fillRule="evenodd" clipRule="evenodd" d="M15.8945 21.1872C16.8259 20.4209 17.9135 19.8727 19.0806 19.5809C19.3724 18.4108 19.9206 17.3232 20.687 16.3948C19.3371 16.439 18.0019 16.7308 16.7552 17.2554C16.2276 18.5021 15.9358 19.8344 15.8945 21.1872ZM28.919 29.4192C28.6272 30.5893 28.079 31.6769 27.3126 32.6053C28.6655 32.564 29.9977 32.2722 31.2444 31.7476C31.772 30.4979 32.0638 29.1657 32.1051 27.8129C31.1737 28.5792 30.0861 29.1274 28.919 29.4192Z" fill="#5EA33B"/>
+                                                    </svg>
+
+                                                    Celo
+                                                </span>
                                                 <span className="pointer-events-none ">
                                                     <DropdownIcon />
                                                 </span>
@@ -91,7 +97,7 @@ const Transfer = () => {
 
                                     <div className="mb-6">
                                         <label className="text-gray-700 font-medium mb-3" htmlFor="amount">Amount</label>
-                                        <input id="amount" type="text" className="block w-full h-[50px] px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="amount" autocomplete="off" placeholder='Paste wallet address here'/>
+                                        <input id="amount" type="text" className="block w-full h-12 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="amount" autocomplete="off" placeholder='Paste wallet address here'/>
                                         
                                     </div>
 

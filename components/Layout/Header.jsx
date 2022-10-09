@@ -54,15 +54,24 @@ const Header = () => {
                                 </a>
                             </Link>
                             
-                            <a href="#responsive-header" className={`block mt-4 lg:inline-block lg:mt-0 text-[#5B5B5B]  hover:bg-gray-300 px-3 py-3 mr-4 rounded-md transition-all duration-200 ease-in-out`}>
-                            Stake
-                            </a>
-                            <a href="#responsive-header" className={`block mt-4 lg:inline-block lg:mt-0 text-[#5B5B5B]  hover:bg-gray-300 px-3 py-3 mr-4 rounded-md transition-all duration-200 ease-in-out `}>
-                            Swap
-                            </a>
-                            <a href="#responsive-header" className={`block mt-4 lg:inline-block lg:mt-0 text-[#5B5B5B]  hover:bg-gray-300 px-3 py-3 mr-4 rounded-md transition-all duration-200 ease-in-out `}>
-                            NFTs
-                            </a>
+                            <Link href='/'>
+                                <a href="" className={`block mt-4 lg:inline-block lg:mt-0 text-[#5B5B5B]  hover:bg-gray-300 px-3 py-3 mr-4 rounded-md transition-all duration-200 ease-in-out`}>
+                                Stake
+                                </a>
+                            </Link>
+                            
+                            <Link href='/'>
+                                <a className={`block mt-4 lg:inline-block lg:mt-0 text-[#5B5B5B]  hover:bg-gray-300 px-3 py-3 mr-4 rounded-md transition-all duration-200 ease-in-out `}>
+                                Swap
+                                </a>
+                            </Link>
+                            
+                            <Link href=''>
+                                <a className={`block mt-4 lg:inline-block lg:mt-0 text-[#5B5B5B]  hover:bg-gray-300 px-3 py-3 mr-4 rounded-md transition-all duration-200 ease-in-out `}>
+                                NFTs
+                                </a>
+                            </Link>
+                            
                         </div>
                         <div className='lg:flex lg:items-center lg:w-auto'>
                             <div className="flex items-center justify-center relative gap-4 px-4 border-r border-r-border-border_cl">

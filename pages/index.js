@@ -279,7 +279,7 @@ export default function Home() {
                     {/* // border-l border-[#E6E3E3] border-r */}
 
                         <Tabs>
-                            <TabList className='flex items-center justify-between w-full tabs-header rounded-md gap-2'>
+                            <TabList className='flex md:flex-row flex-col items-center justify-between w-full tabs-header rounded-md gap-2'>
                                 <Tab className='w-full py-4 rounded-l-md text-sm outline-none focus-within:border-0 focus:border-0'>Fiat Connect</Tab>
                                 <Tab className='w-full py-4   text-sm outline-none focus-within:border-0 focus:border-0'>Crypto address</Tab>
                                 <Tab className='w-full py-4 rounded-r-md text-sm outline-none focus-within:border-0 focus:border-0'>Debit Card</Tab>

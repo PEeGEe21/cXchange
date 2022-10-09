@@ -33,7 +33,7 @@ const Transfer = () => {
                             </aside>
                             
                         </div>
-                        <div className="w-full md:w-8/12 space-x-4 rounded h-full px-3 lg:px-8 border-t md:border-t-0 md:border-l bg-white">
+                        <div className="w-full md:w-8/12 space-x-4 rounded h-full px-0 md:px-6 lg:px-8 border-t md:border-t-0 md:border-l bg-white">
                                 <div className="py-8 px-4 md:px-6 lg:px-8 mt-4 login--bx border border-[#E6E6E7] rounded-md">
                                 <form>
 

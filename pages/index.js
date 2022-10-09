@@ -314,27 +314,27 @@ export default function Home() {
                                     <div className="mb-6 flex md:flex-row flex-col items-start md:items-center gap-4 flex-wrap">
                                         <label className="text-gray-700 font-medium w-full md:w-1/5 " htmlFor="cello_address">Card number</label>
                                         <div className='h-12 w-full relative flex-1'>
-                                            <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                            <input id="cello_address" type="text" className=" block w-full h-full px-4 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
                                         </div>
                                     </div>
-                                    <div className="mb-6 flex items-center gap-4 flex-wrap">
+                                    <div className="mb-6 flex md:flex-row flex-col items-start md:items-center gap-4 flex-wrap">
                                         <label className="text-gray-700 font-medium md:w-1/5 " htmlFor="cello_address">Name on Card</label>
-                                        <div className='h-12  relative flex-1'>
-                                            <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                        <div className='h-12 w-full  relative flex-1'>
+                                            <input id="cello_address" type="text" className=" block w-full h-full px-4 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
                                         </div>
                                     </div>
 
                                     <div className='flex md:gap-6 flex-col md:flex-row'>
-                                        <div className="mb-6 flex items-center gap-4 flex-wrap w-full md:w-1/2">
+                                        <div className="mb-6 flex md:flex-row flex-col items-start md:items-center gap-4 flex-wrap w-full md:w-1/2">
                                             <label className="text-gray-700 font-medium  " htmlFor="expiry_date">Expiry date</label>
-                                            <div className='h-12  relative flex-1'>
-                                                <input id="expiry_date" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="expiry_date" defaultValue=''/>
+                                            <div className='h-12 w-full relative flex-1'>
+                                                <input id="expiry_date" type="text" className=" block w-full h-full px-4 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="expiry_date" defaultValue=''/>
                                             </div>
                                         </div>
-                                        <div className="mb-6 flex items-center gap-4 flex-wrap w-full md:w-1/2">
+                                        <div className="mb-6 flex md:flex-row flex-col items-start md:items-center gap-4 flex-wrap w-full md:w-1/2">
                                             <label className="text-gray-700 font-medium  " htmlFor="cvv">CVV</label>
-                                            <div className='h-12  relative flex-1'>
-                                                <input id="cvv" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cvv" defaultValue=''/>
+                                            <div className='h-12 w-full relative flex-1'>
+                                                <input id="cvv" type="text" className=" block w-full h-full px-4 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cvv" defaultValue=''/>
                                             </div>
                                         </div>
                                     </div>

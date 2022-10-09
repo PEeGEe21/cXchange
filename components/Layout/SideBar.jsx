@@ -7,9 +7,12 @@ const SideBar = ({showMobile}) => {
         <div className={`sidebarmenu ${showMobile ? 'show' : ''} py-5 overflow-y-auto`}>
             <div className=''>
                 <div className='px-6 py-4 flex items-center justify-center border-b border-gray-100'>
-                    <a className='' href='/' >
-                        <img src='/images/logo.svg'/>
-                    </a>
+                    <Link href='/'>
+                        <a className='' >
+                            <img src='/images/logo.svg'/>
+                        </a>
+                    </Link>
+                    
                 </div>
                 <div className='mt-6'>
                     <div className='flex flex-col items-start space-y-4'>

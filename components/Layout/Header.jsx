@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import DropdownIcon from '../icons/DropdownIcon';
 import NotificationIcon from '../icons/NotificationIcon';
+import SideBar from './SideBar';
 
 
 const Header = () => {
+    const [showMobile, setShowMobile] = useState()
     const router = useRouter()
+
+    const ToggleMobileMenu = () =>{
+        setShowMobile(!showMobile);
+    }
 
   return (
     <>
@@ -20,9 +26,17 @@ const Header = () => {
                         </a>
                     </div>
                     <div className="block lg:hidden">
-                        <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                        </button>
+                        <div className='flex gap-5'>
+                            <span className=" px-3 py-2 text-[#DF9E05] bg-[#FEF9ED] transition duration-150 ease-in-out flex items-center justify-center h-9 w-9  rounded-full focus:outline-none focus:ring-0 relative ">
+                                RW 
+                                <span className='absolute h-2 w-2 bg-[#45CD85] right-0 bottom-0 rounded-full'></span>
+                            </span>
+
+                            <button className="flex items-center px-3 py-2 border rounded text-[#45CD85] border-[#45CD85] " onClick={ToggleMobileMenu}>
+                            <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                            </button>
+                        </div>
+                        
                     </div>
                     <div className="w-full hidden  flex-grow lg:flex lg:items-center lg:w-auto">
                         <div className="text-sm lg:flex-grow">
@@ -71,6 +85,11 @@ const Header = () => {
                 </nav>
             </div>
         </header>
+
+
+        <div className='block lg:hidden'>
+            <SideBar showMobile={showMobile} />
+        </div>
     </>
   )
 }

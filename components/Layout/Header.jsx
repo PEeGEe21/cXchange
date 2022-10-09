@@ -32,7 +32,7 @@ const Header = () => {
                                 <span className='absolute h-2 w-2 bg-[#45CD85] right-0 bottom-0 rounded-full'></span>
                             </span>
 
-                            <button className="flex items-center px-3 py-2 border rounded text-[#45CD85] border-[#45CD85] " onClick={ToggleMobileMenu}>
+                            <button className="flex items-center  px-3 py-2 border rounded text-[#45CD85] border-[#45CD85] " onClick={ToggleMobileMenu}>
                             <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
                             </button>
                         </div>

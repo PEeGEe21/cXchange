@@ -8,10 +8,15 @@ import SideBar from './SideBar';
 
 const Header = () => {
     const [showMobile, setShowMobile] = useState()
+    const [showUserMenu, setShowUserMenu] = useState()
     const router = useRouter()
 
     const ToggleMobileMenu = () =>{
         setShowMobile(!showMobile);
+    }
+
+    const ToggleUserMenu = () =>{
+        setShowUserMenu(!showUserMenu);
     }
 
   return (
@@ -80,13 +85,36 @@ const Header = () => {
                                 RW 
                                 <span className='absolute h-2 w-2 bg-[#45CD85] right-0 bottom-0 rounded-full'></span>
                                 </span>
-                                <button className='flex items-center '>
-                                    <div className="flex items-start justify-start flex-col">
-                                        <span className="h4 text-sm font-semibold">Anna Will</span>
-                                        <span className="text-sm">0x34mkko....45526</span>
+                                <div className=' relative' >
+                                    <button className='flex items-center' onClick={ToggleUserMenu}>
+                                        <div className="flex items-start justify-start flex-col">
+                                            <span className="h4 text-sm font-semibold">Anna Will</span>
+                                            <span className="text-sm">0x34mkko....45526</span>
+                                        </div>
+                                        <DropdownIcon/>
+                                    </button>
+                                    
+                                    
+
+                                    <div className={`absolute user-menu ${showUserMenu ? 'show' : ''} dropdown-menu large-dropdown shadow-md rounded-md w-full border-0 fade-in transition duration-300 ease`} >
+                                        
+                                            <div className=" py-2">
+                                                <button className="flex items-center py-2 px-4 text-sm justify-start bg-white border-0 w-full hover:bg-gray-100 ">
+                                                    <span className="mr-3">
+
+                                                        
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.89844 7.55999C9.20844 3.95999 11.0584 2.48999 15.1084 2.48999H15.2384C19.7084 2.48999 21.4984 4.27999 21.4984 8.74999V15.27C21.4984 19.74 19.7084 21.53 15.2384 21.53H15.1084C11.0884 21.53 9.23844 20.08 8.90844 16.54" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M15.0011 12H3.62109" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M5.85 8.6499L2.5 11.9999L5.85 15.3499" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                            
+                                                    </span>
+                                                    Sign Out
+                                                </button>
+                                            </div>
                                     </div>
-                                    <DropdownIcon/>
-                                </button>
+                                </div>
                                 
 
                             </div>

@@ -13,9 +13,9 @@ const SignUp = () => {
     <Head>
         <title>cXchange | Sign Up</title>
         <meta name="description" content="SignUp to cXchange" />
-        <link rel="icon" href="/favi.png" />
+        <link rel="icon" href="/fav.png" />
     </Head>
-    <div className='bg-[#EFFCF6] '>
+    <div className='' style={{backgroundImage: 'url(/images/bq.svg)'}}>
 
         <header className='bg-white shadow-header   px-2 top-0  w-full'>
             <div className='container mx-auto'>

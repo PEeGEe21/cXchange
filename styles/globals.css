@@ -54,7 +54,13 @@ a {
   }
 } */
 
+.auth_pages--body{
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
 
+
+}
 
 header{
   border-bottom: 1px solid rgba(91, 91, 91, 0.15);

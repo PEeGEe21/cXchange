@@ -265,7 +265,7 @@ export default function Home() {
                     
                     <button className="btn btn-sm btn-label-brand btn-bold flex items-start" onClick={()=>setOpenDeposit(false)}>
                            <span className="pointer-events-none">
-                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                            </span>             

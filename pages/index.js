@@ -3,11 +3,21 @@ import Image from 'next/image'
 import UploadIcon from '../components/icons/UploadIcon'
 import WithdrawalIcon from '../components/icons/WithdrawalIcon'
 import Layout from '../components/Layout/Layout'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import styles from '../styles/Home.module.css'
+import { useState } from 'react'
 
 export default function Home() {
   const title = 'cXchange | Dashboard'
   const content = 'cXchange Dashboard'
+
+
+  const [openDeposit, setOpenDeposit] = useState();
+
+  const handleToggleDeposit = () =>{
+    setOpenDeposit(!openDeposit)
+  }
   return (
     <>
     
@@ -28,7 +38,7 @@ export default function Home() {
                             </h2>
                         </div>
 
-                        <button className=" items-center mt-4 lg:mt-0 px-14 py-2 rounded h-12  bg-[#45CD85]  hover:bg-[#45CD85]/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md justify-center  " id="addliquiditybtn">
+                        <button className=" items-center mt-4 lg:mt-0 px-14 py-2 rounded h-12  bg-[#45CD85]  hover:bg-[#45CD85]/80 text-white transition ease-in duration-200 text-center text-sm font-semibold shadow-md justify-center  " onClick={handleToggleDeposit}>
                 
                             Deposit
                             
@@ -241,6 +251,191 @@ export default function Home() {
                       </div>
                       
             </main>
+
+
+            <div  className={`modal ${openDeposit ? 'show' : ''}`}>
+                <div className="modal-wrapper shadow-lg rounded-md">
+        
+                <div className="flex items-start justify-between mb-5">
+
+                    <div className="grow">
+                        <h1 className="text-xl font-semibold">Deposit</h1>
+                    </div>
+
+                    
+                    <button className="btn btn-sm btn-label-brand btn-bold flex items-start" onClick={()=>setOpenDeposit(false)}>
+                           <span className="pointer-events-none">
+                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                           </span>             
+                        
+                    </button>
+
+                </div>
+                    
+                    <div>
+                        
+                    {/* // border-l border-[#E6E3E3] border-r */}
+
+                        <Tabs>
+                            <TabList className='flex items-center justify-between w-full tabs-header rounded-md gap-2'>
+                                <Tab className='w-full py-4 rounded-l-md text-sm outline-none focus-within:border-0 focus:border-0'>Fiat Connect</Tab>
+                                <Tab className='w-full py-4   text-sm outline-none focus-within:border-0 focus:border-0'>Crypto address</Tab>
+                                <Tab className='w-full py-4 rounded-r-md text-sm outline-none focus-within:border-0 focus:border-0'>Debit Card</Tab>
+                            </TabList>
+
+                        <div className='mt-3 py-6'>
+                            <TabPanel>
+                                <div  className='fade-in'>
+
+                                </div>
+
+                            </TabPanel>
+                            <TabPanel>
+                                <div  className='fade-in'>
+                                    <div className="flex items-center gap-4 flex-wrap">
+                                            <label className="text-gray-700 font-medium  " htmlFor="cello_address">Celo Address</label>
+                                            <div className='h-12  relative flex-1'>
+                                                <span className='absolute inset-y-0 right-0 px-3 flex items-center cursor-pointer h-full text-[#45CD85]  '>
+                                                    copy
+                                                </span>
+                                                <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                            </div>
+                                            
+                                            
+                                    </div>
+                                </div>
+                            </TabPanel>
+                            <TabPanel >
+                            <div className='fade-in'>
+                                    <h4 className='mb-3 font-semibold'>Add your Card</h4>
+
+                                    <div className="mb-6 flex items-center gap-4 flex-wrap">
+                                        <label className="text-gray-700 font-medium md:w-1/5 " htmlFor="cello_address">Card number</label>
+                                        <div className='h-12  relative flex-1'>
+                                            <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                        </div>
+                                    </div>
+                                    <div className="mb-6 flex items-center gap-4 flex-wrap">
+                                        <label className="text-gray-700 font-medium md:w-1/5 " htmlFor="cello_address">Name on Card</label>
+                                        <div className='h-12  relative flex-1'>
+                                            <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                        </div>
+                                    </div>
+
+                                    <div className='flex md:gap-6 flex-col md:flex-row'>
+                                        <div className="mb-6 flex items-center gap-4 flex-wrap w-full md:w-1/2">
+                                            <label className="text-gray-700 font-medium  " htmlFor="expiry_date">Expiry date</label>
+                                            <div className='h-12  relative flex-1'>
+                                                <input id="expiry_date" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="expiry_date" defaultValue=''/>
+                                            </div>
+                                        </div>
+                                        <div className="mb-6 flex items-center gap-4 flex-wrap w-full md:w-1/2">
+                                            <label className="text-gray-700 font-medium  " htmlFor="cvv">CVV</label>
+                                            <div className='h-12  relative flex-1'>
+                                                <input id="cvv" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cvv" defaultValue=''/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TabPanel>
+                        </div>
+                           
+                        </Tabs>
+                    </div>
+                
+                </div>
+            </div>
+            {/* <div  className="dialog fixed z-[10002] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-96 md:w-[40em] max-w-2lg bg-white rounded-md px-3 lg:px-8 py-6 space-y-5 shadow-lg overflow-y-auto h-auto max-h-full fade-in">
+                <div className="">
+        
+                <div className="flex items-start justify-between mb-5">
+
+                    <div className="grow">
+                        <h1 className="text-xl font-semibold">Deposit</h1>
+                    </div>
+
+                    
+                    <button className="btn btn-sm btn-label-brand btn-bold flex items-start" id="close">
+                           <span className="pointer-events-none">
+                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 5L5 15M5 5L15 15" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                           </span>             
+                        
+                    </button>
+
+                </div>
+                    
+                    <div>
+                        
+                    border-l border-[#E6E3E3] border-r
+
+                        <Tabs>
+                            <TabList className='flex items-center justify-between w-full tabs-header rounded-md gap-2'>
+                                <Tab className='w-full py-4 rounded-l-md text-sm outline-none focus-within:border-0 focus:border-0'>Fiat Connect</Tab>
+                                <Tab className='w-full py-4   text-sm outline-none focus-within:border-0 focus:border-0'>Crypto address</Tab>
+                                <Tab className='w-full py-4 rounded-r-md text-sm outline-none focus-within:border-0 focus:border-0'>Debit Card</Tab>
+                            </TabList>
+
+                        <div className='mt-8 py-6'>
+                            <TabPanel>
+
+                            </TabPanel>
+                            <TabPanel>
+                                <div>
+                                    <div className="flex items-center gap-4 flex-wrap">
+                                            <label className="text-gray-700 font-medium  " htmlFor="cello_address">Celo Address</label>
+                                            <div className='h-12  relative flex-1'>
+                                                <span className='absolute inset-y-0 right-0 px-3 flex items-center cursor-pointer h-full text-[#45CD85]  '>
+                                                    copy
+                                                </span>
+                                                <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                            </div>
+                                            
+                                            
+                                    </div>
+                                </div>
+                            </TabPanel>
+                            <TabPanel>
+                            <div>
+                                    <div className="mb-6 flex items-center gap-4 flex-wrap">
+                                        <label className="text-gray-700 font-medium md:w-1/5 " htmlFor="cello_address">Card number</label>
+                                        <div className='h-12  relative flex-1'>
+                                            <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                        </div>
+                                    </div>
+                                    <div className="mb-6 flex items-center gap-4 flex-wrap">
+                                        <label className="text-gray-700 font-medium md:w-1/5 " htmlFor="cello_address">Name on Card</label>
+                                        <div className='h-12  relative flex-1'>
+                                            <input id="cello_address" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cello_address" defaultValue='0xGI5678vviu9755iNFTDXVH55787'/>
+                                        </div>
+                                    </div>
+
+                                    <div className='flex md:gap-6 flex-col md:flex-row'>
+                                        <div className="mb-6 flex items-center gap-4 flex-wrap w-full md:w-1/2">
+                                            <label className="text-gray-700 font-medium  " htmlFor="expiry_date">Expiry date</label>
+                                            <div className='h-12  relative flex-1'>
+                                                <input id="expiry_date" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="expiry_date" defaultValue=''/>
+                                            </div>
+                                        </div>
+                                        <div className="mb-6 flex items-center gap-4 flex-wrap w-full md:w-1/2">
+                                            <label className="text-gray-700 font-medium  " htmlFor="cvv">CVV</label>
+                                            <div className='h-12  relative flex-1'>
+                                                <input id="cvv" type="text" className=" block w-full h-full pl-4 pr-14 py-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none" name="cvv" defaultValue=''/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TabPanel>
+                        </div>
+                           
+                        </Tabs>
+                    </div>
+                
+                </div>
+            </div> */}
         </div>
     </Layout>
     </>

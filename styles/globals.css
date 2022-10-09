@@ -130,3 +130,127 @@ header{
   /* transform: rotate(180deg); */
   width: 0;
 }
+
+
+
+/* ====== TABS ===== */
+.react-tabs li{
+  background: #F2F1F1;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  color: #9B9999;
+}
+
+.react-tabs li.react-tabs__tab--selected{
+  background: #45CD85;
+  border-radius: inherit;
+  border: 0;
+  color: #fff;
+
+}
+
+.modal{
+  position: fixed;
+  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow-x: hidden;
+  background-color: rgba(31,32,41,.75);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms 700ms ease;
+}
+
+.modal-wrapper{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* border-radius: 4px; */
+  overflow: hidden;
+  padding-bottom: 20px;
+  background-color: #fff;
+    -ms-flex-item-align: center;
+    align-self: center;
+    /* box-shadow: 0 12px 25px 0 rgba(199,175,189,.25); */
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
+  padding: 20px;
+}
+
+
+.modal.show{
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+
+  .modal.show .modal-wrapper{
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
+  }
+
+/* react-tabs__tab--selected */
+
+@media only screen and (max-width: 991px){
+  .modal-wrapper {
+    max-width: 700px;
+  } 
+}
+@media only screen and (max-width: 767px){
+  .modal-wrapper {
+    width: calc(100% - 40px);
+  } 
+}
+
+
+
+.fade-in {
+  animation: fadeIn 300ms;
+  -webkit-animation: fadeIn 300ms;
+  -moz-animation: fadeIn 300ms;
+  -o-animation: fadeIn 300ms;
+  -ms-animation: fadeIn 300ms;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

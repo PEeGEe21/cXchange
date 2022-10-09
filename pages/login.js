@@ -25,7 +25,7 @@ const Login = () => {
                             <img src='/images/logo.svg'/>
                         </a>
                     </div>
-                    <div className="block lg:hidden">
+                    <div className="hidden">
                         <button className="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500">
                             <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <title>
